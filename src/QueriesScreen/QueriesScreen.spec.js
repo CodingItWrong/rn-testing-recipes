@@ -10,4 +10,16 @@ describe('QueriesScreen', () => {
 
     expect(screen.queryByPlaceholderText('Text goes here')).toBeTruthy();
   });
+
+  it('can get input text', () => {
+    render(<QueriesScreen />);
+
+    expect(screen.queryByPlaceholderText('Text goes here').props.value).toEqual(
+      'initial input',
+    );
+    expect(screen.queryByPlaceholderText('Text goes here')).toHaveProp(
+      'value',
+      'initial input',
+    );
+  });
 });
