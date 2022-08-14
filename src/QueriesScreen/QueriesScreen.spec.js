@@ -22,4 +22,10 @@ describe('QueriesScreen', () => {
       'initial input',
     );
   });
+
+  it('can get an SVG', () => {
+    render(<QueriesScreen />);
+
+    expect(screen.queryByLabelText('down arrow')).toBeTruthy();
+  });
 });
