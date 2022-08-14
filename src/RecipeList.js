@@ -1,15 +1,22 @@
 import {useNavigation} from '@react-navigation/native';
 import {Pressable, StyleSheet, Text} from 'react-native';
 
+const rows = [{name: 'Queries'}, {name: 'Native Components'}];
+
 export default function RecipeList() {
   const navigation = useNavigation();
   return (
-    <Pressable
-      style={styles.row}
-      onPress={() => navigation.navigate('Queries')}
-    >
-      <Text style={styles.rowText}>Queries</Text>
-    </Pressable>
+    <>
+      {rows.map(row => (
+        <Pressable
+          key={row.name}
+          style={styles.row}
+          onPress={() => navigation.navigate(row.name)}
+        >
+          <Text style={styles.rowText}>{row.name}</Text>
+        </Pressable>
+      ))}
+    </>
   );
 }
 
