@@ -11,5 +11,6 @@ module.exports = {
       'warn',
       {ignoreDeclarationSort: true, ignoreMemberSort: false},
     ], // alphabetize named imports - https://eslint.org/docs/rules/sort-imports
+    'react/react-in-jsx-scope': 'off',
   },
 };
