@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Text, TextInput} from 'react-native';
+import {Image, Text, TextInput} from 'react-native';
 import DownArrow from '../assets/down-arrow.svg';
 
 export default function QueriesScreen() {
@@ -12,6 +12,12 @@ export default function QueriesScreen() {
         placeholder="Text goes here"
         value={inputText}
         onChangeText={setInputText}
+      />
+      <Image
+        source={require('../assets/harold.jpg')}
+        accessibilityLabel="Harold"
+        resizeMode="stretch"
+        style={{width: 768 / 2, height: 645 / 2}}
       />
       <DownArrow
         accessibilityLabel="down arrow"

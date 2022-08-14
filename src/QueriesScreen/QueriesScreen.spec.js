@@ -23,6 +23,12 @@ describe('QueriesScreen', () => {
     );
   });
 
+  it('can get an Image', () => {
+    render(<QueriesScreen />);
+
+    expect(screen.queryByLabelText('Harold')).toBeTruthy();
+  });
+
   it('can get an SVG', () => {
     render(<QueriesScreen />);
 
